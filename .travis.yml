@@ -4,5 +4,6 @@ services:
 
 before_install:
     - docker build -t pranshulaggarwal/reactapp -f Dockerfile.dev .
+    
 script:
     - docker run -e CI=true pranshulaggarwal/reactapp npm run test   
